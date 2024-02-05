@@ -79,11 +79,11 @@ def fetch_tiktok_data(headers,start_date,end_date):
     total_count = 0
     while True:
         response = requests.post(url, headers=headers, json=data)
-        if response.status_code == 200:
+        if response.status_code == 200: #
             if response.json()["data"]["has_more"] != True:
                 full_json_response['data']['videos'].extend(response.json()['data']['videos'])
                 return full_json_response,total_count
-            elif response.json()["data"]["has_more"] == True:
+            elif response.json()["data"]["has_more"] == True: 
                 next_cursor = response.json()['data']['cursor']
                 data['cursor'] = next_cursor
                 full_json_response['data']['videos'].extend(response.json()['data']['videos'])
@@ -112,7 +112,7 @@ start_date="20221120"
 start_date_obj = datetime.strptime(start_date, "%Y%m%d")
 
 """
-insert loop explanation here
+this loop will grab data at 1 day increments (i.e. 20221120 to 20221121)
 """
 while start_date != "20220301":  
     #The end date will be 1 day after the start date (i.e. start date = 20221120, end date = 20221121)
@@ -123,7 +123,7 @@ while start_date != "20220301":
     #collect the data from TikTok
     data,total = fetch_tiktok_data(headers,start_date,end_date_str)
     
-    #put the data into a json file 
+    #save the data into a json file 
     if data:
         save_to_json_file(data, f'peru_coup_{start_date}_{end_date_str}.json')
 
