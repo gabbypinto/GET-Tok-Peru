@@ -73,7 +73,7 @@ payload = {
           "type": "text",
           "text":''' 
 Transcript:  INSERT TRANSCRIPT HERE
-Text Displayed in the Video: INSERT VIDEO DESCRIPTION HERE
+Description: INSERT VIDEO DESCRIPTION HERE
 '''
         },
         {
