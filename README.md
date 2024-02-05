@@ -1,4 +1,4 @@
-# collect-tiktoks
+# GET-Tok-Peru
 This is a repository that collects TikTok data with TikTok Research API access 
 
 
