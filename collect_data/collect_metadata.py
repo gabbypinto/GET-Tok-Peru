@@ -21,7 +21,7 @@ def save_to_json_file(data, filename):
         filename (str): name of the file with the response
 
         Returns:
-        float: The area of the circle.
+        None: creates a json file
     """
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)

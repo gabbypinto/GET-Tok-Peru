@@ -2,7 +2,7 @@
 author: Gabriela Pinto 
 date: Feb 4, 2024
 
-This script will check if the video is still publicly available
+This script will check if the video is still publicly available via pyktok
 """
 
 
