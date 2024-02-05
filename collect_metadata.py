@@ -1,4 +1,7 @@
 """
+author: Gabriela Pinto
+date: Feb 4, 2024
+
 This script calls the TikTok Research API to 
 collect the metadata
 """
@@ -125,7 +128,7 @@ while start_date != "20220301":
     
     #save the data into a json file 
     if data:
-        save_to_json_file(data, f'peru_coup_{start_date}_{end_date_str}.json')
+        save_to_json_file(data, f'{start_date}_{end_date_str}.json')
 
     #increment the start date for the next iteration
     start_date_obj = datetime.strptime(start_date, "%Y%m%d")

@@ -1,3 +1,12 @@
+"""
+author: Gabriela Pinto
+date: Feb 4, 2024
+
+This script will download the videos given the dataframe 
+containing the metadata collected using "collect_metadata.py"
+"""
+
+
 import pyktok as pyk
 import os
 import pandas as pd
@@ -6,11 +15,13 @@ import time
 
 def create_url(row):
     """
+        Create a link to the video 
+
         Parameters:
         Pandas row: row from your dataframe, which contains the username and video id (id attribute)
         
         Returns:
-        str: formatted url required for pyktok
+        str: formatted link to the video 
     """
     username = row['username']
     videoid = row['id']
@@ -19,6 +30,8 @@ def create_url(row):
 
 def format_url(url):
     """
+        Format the url needed for pyktok
+
         Parameters:
         str: url to the tiktok video
         Returns:
@@ -74,7 +87,8 @@ def download(url):
 start_time = time.perf_counter()
 pyk.specify_browser('chrome') 
 
-full_path = "<PATH TO YOUR CSV FILE>"
+#change FILENAME to the name of your file
+full_path = "FILENAME.csv"
 try:
     df = pd.read_csv(full_path)
     file_name_with_extension = full_path.split('/')[-1]
