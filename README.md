@@ -2,7 +2,8 @@
 This is a repository that collects TikTok data with TikTok Research API access 
 
 
-
+generate_credentials.txt
+- contains the command to generate the API token
 
 
 get_tiktok_token.sh

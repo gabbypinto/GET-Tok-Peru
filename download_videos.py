@@ -4,6 +4,11 @@ date: Feb 4, 2024
 
 This script will download the videos given the dataframe 
 containing the metadata collected using "collect_metadata.py"
+
+Note: the mp4 file generate by pyktok is in the following format...
+@username_video_id.mp4
+username - TikTok attribute 
+id - TikTok attirbute
 """
 
 
