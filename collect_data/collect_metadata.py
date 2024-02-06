@@ -37,7 +37,7 @@ def fetch_tiktok_data(headers,start_date,end_date):
         end_date (str): end date that will be included in our query
 
         Returns:
-        float: The area of the circle.
+        dictionary: response from the query
     """
     full_json_response = {}
     full_json_response['data']={}
