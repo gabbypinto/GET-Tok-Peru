@@ -3,6 +3,10 @@
 ## Description
 This is a repository that collects TikTok data with TikTok Research API access and augments the data with Generative AI (Whisper and GPT-4)
 
+## Installation
+pip install -r requirements.txt 
+
+*Note: I did not us a virtual environment so the packages in the requirements.txt file are probably not reflective of all the packages used in this project. If some issues pop up please don't hesitate to email me at: gpinto@usc.edu*
 
 ## Requirements
 - Access to the TikTok Research API 
